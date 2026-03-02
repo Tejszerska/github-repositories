@@ -1,0 +1,14 @@
+1. odpowiedz na zapytanie z repository to Lista - nie potrzeba wraperra. Json ma formę
+ [
+    "name": "repo1"},
+    {"name": "repo2"}
+ ]
+
+a nie {
+        "items": [ ... ]
+      }
+
+2. Feign automatycznie ignoruje dane których nie mamy w swoim dto - w innych klientach HTTP
+np RestTemplate, WebClient używamy biblioteki Jackson i adnotacji @JsonIgnoreProperties(ignoreUnknown = true)
+
+POCZYTAĆ O SCHEMA JSON
