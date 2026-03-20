@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres
+    container_name: local_pg_repo
+    restart: always
+    ports:
+      - "54322:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: postgres
+  pgAdmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container_repo
+    restart: always
+    ports:
+      - "5060:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: a@a.pl
+      PGADMIN_DEFAULT_PASSWORD: admin
